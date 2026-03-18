@@ -59,7 +59,23 @@ namespace KeresztrejtvenyGUI
                     aktualisTextBox.Width = 20;
                     aktualisTextBox.TextAlignment = TextAlignment.Center;
                     Relytveny.Children.Add(aktualisTextBox);
+                    aktualisTextBox.MaxLength = 1;
+                    aktualisTextBox.MouseDoubleClick += aktualisTextBox_MouseDoubleClick;
                 }
+            }
+        }
+
+        private void aktualisTextBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+
+            if (tb.Text == "-")
+            {
+                tb.Text = "#";
+            }
+            else if (tb.Text == "#")
+            {
+                tb.Text = "-";
             }
         }
 
