@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KeresztrejtvenyGUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
-    </Grid>
+         Title="Keresztrejtveny készítő" Height="500" Width="450">
+    <Canvas x:Name="Relytveny">
+        <Label Content="Keresztrejtvény mérete [sor x oszlop]: " Canvas.Left="5" Canvas.Top="15"/>
+        <Button x:Name="btnLetrehoz" Content="Keresztrelytvény létrehozása" Canvas.Left="10" Canvas.Top="50" Width="160" Click="btnLetrehoz_Click"/>
+        <Button x:Name="btnMentes" Content="Keresztrejtveny mentése" Canvas.Left="185" Canvas.Top="50" Width="150" Click="btnMentes_Click"/>
+        <ComboBox x:Name="cbSorokSzama" Canvas.Left="220" Canvas.Top="15" Width="40"/>
+        <ComboBox x:Name="cbOszlopokSzama" Canvas.Left="270" Canvas.Top="15" Width="40"/>
+        <ComboBox x:Name="cbAllomanyIndexe" Canvas.Left="370" Canvas.Top="50" Width="40"/>
+    </Canvas>
 </Window>
